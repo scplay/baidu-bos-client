@@ -1,0 +1,17 @@
+{
+    "name": "zeonwang/baidu-bos-client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zeon",
+            "email": "scplay@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "auto-load": {
+        "psr-4" : {
+            "ZeonWang\\BaiduBosClient\\": "src/"
+        }
+    }
+}
