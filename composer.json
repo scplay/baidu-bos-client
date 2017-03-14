@@ -8,7 +8,7 @@
         }
     ],
     "minimum-stability": "beta",
-    "auto-load": {
+    "autoload": {
         "psr-4" : {
             "ZeonWang\\BaiduBosClient\\": "src/"
         }
