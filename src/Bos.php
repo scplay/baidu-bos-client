@@ -7,7 +7,7 @@
  * Time: 14:58
  */
 
-namespace BaiduBosClient\Bos;
+namespace ZeonWang\BaiduBosClient;
 
 use BaiduBce\Util\Time;
 use BaiduBce\Services\Bos\BosClient;
