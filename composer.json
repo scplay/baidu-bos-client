@@ -7,8 +7,7 @@
             "email": "scplay@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {},
+    "minimum-stability": "1.0",
     "auto-load": {
         "psr-4" : {
             "ZeonWang\\BaiduBosClient\\": "src/"
