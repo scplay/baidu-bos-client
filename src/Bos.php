@@ -9,7 +9,6 @@
 
 namespace ZeonWang\BaiduBosClient;
 
-use BaiduBce\Util\Time;
 use BaiduBce\Services\Bos\BosClient;
 use BaiduBce\Services\Bos\BosOptions;
 use BaiduBce\Auth\SignOptions;

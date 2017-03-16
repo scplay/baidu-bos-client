@@ -38,7 +38,7 @@ class BosServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('Bos',function(){
+        $this->app->singleton('bos',function(){
            return new Bos( config('bos.config') , config('bos.bucket') );
         });
     }
