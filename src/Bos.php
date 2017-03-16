@@ -17,27 +17,38 @@ require_once 'BaiduBce.phar';
 
 class Bos
 {
-    public $bucket;
     public $client;
+    public $bucket;
     public $sign_array;
 
-    public function __construct( $config , $bucket )
+    public function __construct($config, $bucket)
     {
-        $this->bucket = $bucket;
+        $this->client = new BosClient($config);
 
-        $this->client = new BosClient( $config );
+        $this->bucket = $bucket;
 
         $this->sign_array = [
             BosOptions::SIGN_OPTIONS => [
-                SignOptions::TIMESTAMP=>new \DateTime(),
-                SignOptions::EXPIRATION_IN_SECONDS=>300,
+                SignOptions::TIMESTAMP => new \DateTime(),
+                SignOptions::EXPIRATION_IN_SECONDS => 300,
             ]
         ];
     }
 
+    /**
+     * Facade 会将静态调用变成 call ？ 这里就可以
+     * @param $name
+     * @param $arguments
+     * @return null
+     */
+    function __call($name, $arguments)
+    {
+        if (property_exists($this, $name)) {
+            return $this->$name;
+        } elseif (method_exists($this, $name)){
+            return $this->$name(...$arguments);
+        }
+        return null;
+    }
+
 }
-
-
-
-
-?>
