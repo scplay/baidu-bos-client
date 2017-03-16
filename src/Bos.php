@@ -15,7 +15,7 @@ use BaiduBce\Auth\SignOptions;
 
 require_once 'BaiduBce.phar';
 
-class Bos
+class Bos implements BosInterface
 {
     public $client;
     public $bucket;
