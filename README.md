@@ -7,3 +7,4 @@ use for bos file upload and download
     - add bosJSON and sessionToken
 - 2017-03-16
     - register use Laravel service provider & add publish config
+

@@ -62,7 +62,6 @@ class Bos implements BosInterface
         ];
     }
 
-    
     public function getSessionToken( $acl = [] )
     {
         $entity_array =  $acl ?: $this->default_acl;
