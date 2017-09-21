@@ -59,10 +59,14 @@ class BosServiceProvider extends ServiceProvider
         $this->publishes([
             // 从本地指定目录复制到 laravel 的 config 目录
             __DIR__.'/../src/config/bos.php' => config_path('bos.php'),
-            // 如指定 tag 名
-            // 可以使用 php artisan vendor:publish --tag=config 来单独复制 加上 --force 可强制覆盖原有文件
-            'config'
-        ]);
+            
+        ], 
+        
+         // 如指定 tag 名
+         // 可以使用 php artisan vendor:publish --tag="bos-config" 来单独复制 加上 --force 可强制覆盖原有文件
+         // 也可以使用 php artisan vendor:publish --provider="ZeonWang\BaiduBosClient\BosServiceProvider" 
+         'bos-config'
+        );
 
     }
 
