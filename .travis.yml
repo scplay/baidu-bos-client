@@ -1,4 +1,4 @@
 language: php
 
 script:
-    - "./test"
+    - bash "./test"
