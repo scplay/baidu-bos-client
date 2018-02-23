@@ -188,6 +188,13 @@ class Bos implements BosInterface
     }
 
     /**
+     * @return self
+     */
+    function self() {
+    	return $this;
+    }
+
+    /**
      * Facade 会将静态调用变成 call ？ 这里就可以
      * @param $name
      * @param $arguments
