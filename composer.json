@@ -1,5 +1,6 @@
 {
     "name": "zeonwang/baidu-bos-client",
+    "description": "zeon wrap bos client api",
     "license": "MIT",
     "authors": [
         {
@@ -12,5 +13,12 @@
         "psr-4" : {
             "ZeonWang\\BaiduBosClient\\": "src/"
         }
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+          "ZeonWang\\BaiduBosClient\\BosServiceProvider"
+        ]
+      }
     }
 }
